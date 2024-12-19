@@ -1,8 +1,7 @@
 ## 서버 회원 관리시스템
 
 # 게임 서버, 회원, 회사 테이블을 만들어서 관리
-
-![스크린샷 2024-12-19 22:20:58](https://github.com/user-attachments/assets/50355b74-9a3d-462a-b6e9-f9df96b64c51)
+<img src="https://github.com/user-attachments/assets/efd0d412-b963-4b3f-99f6-65aca3f1f76b.png"  width="200" height="400"/></img><br/>
 
 --게임 회사 릴레이션
 CREATE TABLE company
