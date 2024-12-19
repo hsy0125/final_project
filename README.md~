@@ -2,7 +2,8 @@
 
 # 게임 서버, 회원, 회사 테이블을 만들어서 관리
 
-<img width="333" alt="스크린샷 2024-12-19 222058" src="https://github.com/user-attachments/assets/50355b74-9a3d-462a-b6e9-f9df9b64c451" />
+<img width="333" alt="image" src="https://github.com/user-attachments/assets/2733fac7-8e17-4c9a-bb4b-c228003a6edd" />
+
 --게임 회사 릴레이션
 CREATE TABLE company
 (
