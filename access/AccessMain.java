@@ -1,5 +1,7 @@
 package io.mobile.finalproject.access;
 
+import io.mobile.finalproject.game.Game;
+import io.mobile.finalproject.game.GameService; // GameService도 함께 추가
 import java.sql.Date;
 import java.util.List;
 import java.util.Scanner;
@@ -10,13 +12,35 @@ public class AccessMain {
 
         // 1. Access 추가
         System.out.println("Access 추가:");
-        int result = AccessService.insert("009", "서버1", "PlayerOne", Date.valueOf("2022-07-11"), null, 500);
-        System.out.println(result > 0 ? "추가 성공!" : "추가 실패!");
+        System.out.println("다음 형식으로 Access 정보를 입력하세요: 회원ID,서버ID,닉네임,가입날짜(YYYY-MM-DD),등급,게임머니");
+        System.out.print("입력: ");
+        String input = scanner.nextLine();
+        String[] accessData = input.split(",");
 
-        // 2. 특정 Access 조회
-        System.out.println("\n특정 Access 조회:");
-        Access access = AccessService.selectByMemberAndServer("009", "서버1");
-        System.out.println(access != null ? access : "Access 정보 없음");
+        if (accessData.length == 6) {
+            String memberId = accessData[0].trim();
+            String serverId = accessData[1].trim();
+            String nickname = accessData[2].trim();
+            Date joinDate = Date.valueOf(accessData[3].trim());
+            String grade = accessData[4].trim();
+            int gameMoney = Integer.parseInt(accessData[5].trim());
+
+            // 서버의 현재 접속 회원 수 확인
+            Game server = GameService.selectById(serverId);
+            if (server != null && server.getConnCount() >= 110) {
+                System.out.println("서버 " + serverId + "의 접속 회원 수가 110명을 초과하여 접속할 수 없습니다.");
+            } else {
+                int result = AccessService.insert(memberId, serverId, nickname, joinDate, grade, gameMoney);
+                System.out.println(result > 0 ? "Access 추가 성공!" : "Access 추가 실패!");
+            }
+        } else {
+            System.out.println("잘못된 입력 형식입니다. 다시 시도하세요.");
+        }
+
+//        // 2. 특정 Access 조회
+//        System.out.println("\n특정 Access 조회:");
+//        Access access = AccessService.selectByMemberAndServer("009", "서버1");
+//        System.out.println(access != null ? access : "Access 정보 없음");
 
         // 3. 모든 Access 조회
         System.out.println("\n모든 Access 조회:");
