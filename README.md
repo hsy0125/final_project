@@ -30,8 +30,7 @@
 
 -게임회사가 게임서버를 관리할때 점검일자와 서버 유지 비용 정보를 저장한다.
 
-##데이터베이스 ERD
-### ERD 사진 첨부
+## 데이터베이스 ERD
 
 <img width="333" alt="스크린샷 2024-12-19 222058" src="https://github.com/user-attachments/assets/efd0d412-b963-4b3f-99f6-65aca3f1f76b" />
 
