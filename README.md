@@ -64,6 +64,9 @@
 
 ![image](https://github.com/user-attachments/assets/9606a790-e8b5-462e-9cae-a4fbfca6d385)
 
+![image](https://github.com/user-attachments/assets/c192e442-e79c-49e0-a9e1-5ea77256e834)
+
+
 
 ---
 ## 등급 체계
