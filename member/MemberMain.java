@@ -34,17 +34,13 @@ public class MemberMain {
             System.out.println("회원 추가를 건너뜁니다.");
         }
 
-        // 2. 특정 회원 조회
-        System.out.println("\n특정 회원 조회:");
-        Member member = MemberService.selectById("009");
-        System.out.println(member != null ? member : "회원 정보 없음");
 
-        // 3. 모든 회원 조회
+        // 2. 모든 회원 조회
         System.out.println("\n모든 회원 조회:");
         List<Member> members = MemberService.selectAll();
         members.forEach(System.out::println);
 
-        // 4. 회원 정보 수정 여부 확인
+        // 3. 회원 정보 수정 여부 확인
         System.out.println("\n정보를 수정하시겠습니까? (예/아니오): ");
         String updateAnswer = scanner.nextLine();
         if (updateAnswer.equalsIgnoreCase("예")) {
@@ -69,7 +65,7 @@ public class MemberMain {
             System.out.println("정보 수정을 건너뜁니다.");
         }
 
-        // 5. 회원 삭제 여부 확인
+        // 4. 회원 삭제 여부 확인
         System.out.println("\n정보를 삭제하시겠습니까? (예/아니오): ");
         String deleteAnswer = scanner.nextLine();
         if (deleteAnswer.equalsIgnoreCase("예")) {
