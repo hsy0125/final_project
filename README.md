@@ -63,6 +63,7 @@
 ## 테이블 명세서
 
 <img src="https://github.com/hsy0125/final_project/issues/2#issue-2753994642" alt="Table1" width="500" />
+https://github.com/hsy0125/final_project/issues/2#issue-2753994642
 
 ---
 ## 등급 체계
