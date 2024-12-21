@@ -62,7 +62,7 @@
 
 ## 테이블 명세서
 
-<img src="https://github.com/user-attachments/assets/efd0d412-b963-4b3f-99f6-65aca3f1f76b" alt="ERD Diagram" width="500" />
+<img src="https://github.com/hsy0125/final_project/issues/2#issue-2753994642" alt="Table1" width="500" />
 
 ---
 ## 등급 체계
