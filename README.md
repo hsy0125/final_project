@@ -62,9 +62,7 @@
 
 ## 테이블 명세서
 
-<img src="https://github.com/hsy0125/final_project/issues/2#issue-2753994642" alt="Table1" width="500" />
-https://github.com/hsy0125/final_project/issues/2#issue-2753994642
-
+<img src="https://private-user-images.githubusercontent.com/131340738/397928434-c8247040-9c4e-4cbf-bc0b-0038627a9bef.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzQ3ODYyNzksIm5iZiI6MTczNDc4NTk3OSwicGF0aCI6Ii8xMzEzNDA3MzgvMzk3OTI4NDM0LWM4MjQ3MDQwLTljNGUtNGNiZi1iYzBiLTAwMzg2MjdhOWJlZi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMjIxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTIyMVQxMjU5MzlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04MjkyNmViMTUzNWNjYTljNjFkNjQyMWMyYTkwZjFhNTg3YjU4Mjc4OWFlZTIyYTk5MWNiNDU4MGUwNmQ0MmRkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.V36IwZcRru7p8L4Kl_spsR8k1syfdMgOMIrz6JOeFyU" alt="Table1" width="600" />
 ---
 ## 등급 체계
 
