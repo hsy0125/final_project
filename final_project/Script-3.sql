@@ -59,7 +59,7 @@ CREATE TABLE member
 );
 
 INSERT INTO member(member_id, password, name, age, email, phonenum)
-VALUES ('001', 'sdaofd', '이현경', 22, 'lhk0864@naver.com', '010-3080-0864');
+VALUES ('001', 'sdaofd', '이현경', 22, 'lhk0864@naver.com', '010-8547-1224');
 INSERT INTO member(member_id, password, name, age, email, phonenum)
 VALUES ('002', 'sdadtyrtd', '허소영', 22, 'thdud@naver.com', '010-3345-7890');
 INSERT INTO member(member_id, password, name, age, email, phonenum)
