@@ -11,7 +11,7 @@
 ---
 ## 구성원 역할
 ### 이현경
-   - 릴레이션의 삽입, 수정, 삭제기능 구현
+   - sql 코드를 자바코드로 변환 후 릴레이션의 삽입, 수정, 삭제기능 구현
    - 서버 접속자 수 제한 기능 구현
    - 발표
 
@@ -63,6 +63,8 @@
 ## 테이블 명세서
 
 <img src="https://private-user-images.githubusercontent.com/131340738/397928434-c8247040-9c4e-4cbf-bc0b-0038627a9bef.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzQ3ODYyNzksIm5iZiI6MTczNDc4NTk3OSwicGF0aCI6Ii8xMzEzNDA3MzgvMzk3OTI4NDM0LWM4MjQ3MDQwLTljNGUtNGNiZi1iYzBiLTAwMzg2MjdhOWJlZi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMjIxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTIyMVQxMjU5MzlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04MjkyNmViMTUzNWNjYTljNjFkNjQyMWMyYTkwZjFhNTg3YjU4Mjc4OWFlZTIyYTk5MWNiNDU4MGUwNmQ0MmRkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.V36IwZcRru7p8L4Kl_spsR8k1syfdMgOMIrz6JOeFyU" alt="Table1" width="600" />
+<img src="https://private-user-images.githubusercontent.com/131340738/397928499-f6f16537-f53c-4e8a-992d-4f3f50c494db.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzQ3ODY1MjYsIm5iZiI6MTczNDc4NjIyNiwicGF0aCI6Ii8xMzEzNDA3MzgvMzk3OTI4NDk5LWY2ZjE2NTM3LWY1M2MtNGU4YS05OTJkLTRmM2Y1MGM0OTRkYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMjIxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTIyMVQxMzAzNDZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05MDM4YzBiYTRkMThiMTIwMWFkMGY4NTkxN2NlNTM4ZjUyOWZiNWYwMGEzMmU1ZGIzZDk0YWJjNTY5ZGYwNDJhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.CbX-1R3cCOvQCZW4vNKAJD9M8HIsHrmPSHBGYHR47Wo" alt="Table2" width="600" />
+
 ---
 ## 등급 체계
 
@@ -74,7 +76,13 @@
 
 ---
 
-## 모든 릴레이션에 관한 삽입, 수정, 삭제 기능 (회원정보와 게임회사정보)
+### **서버접속자 수 제한**
+- 서버에 접속할 수 있는 회원수를 제한합니다.(110명)
+- 서버에 새로운 회원을 추가할 때 접속이 가능한지 여부를 (110명과 비교) 판별합니다.
+
+---
+
+## 모든 릴레이션에 관한 삽입, 수정, 삭제 기능 (회원정보, 게임회사정보, 접속정보)
 
 ### **삽입 기능**
 - 회원개체에 대한 속성을 삽입할 수 있습니다.
@@ -94,14 +102,18 @@
 
 
 #### 삽입, 수정, 삭제 순으로 진행합니다.
-#### MemberMain ,CompanyMain에서 동작을 수행합니다.
+#### MemberMain, CompanyMain, AccessMain 에서 동작을 수행합니다.
 
 ---
+## 요구사항 수행내용
+1. **회원 요구사항**
+   - 회원 아이디, 비밀번호, 이름, 나이, 이메일, 전화번호를 저장합니다.
+   - 회원은 여러 서버에 접속할 수 있다.
+   **수행내용**
+   - MemberMain 클래스에서 회원 정보를 삽입, 수정, 삭제할 수 있도록 구현
+   - MemberService 클래스를 데이터베이스의 member 테이블과 연동하여 Create, Read, Update, Delete 작업을 수행
 
-### **서버접속자 수 제한**
-- 서버에 접속할 수 있는 회원수를 제한합니다.(110명)
-- 서버에 새로운 회원을 추가할 때 접속이 가능한지 여부를 (110명과 비교) 판별합니다.
-
+---
 
 ## 기대 효과
 1. **효율적인 회원 관리**
